@@ -13,7 +13,7 @@ const AadhaarVerificationPage = () => {
 
   const handleSendOtp = async () => {
     try {
-      const response = await axios.post("https://localhost:5000/api/adhar/adhar", {
+      const response = await axios.post("http://localhost:5000/api/adhar/adhar", {
         aadharNumber: aadhaarNumber,
       });
 
@@ -38,7 +38,7 @@ const AadhaarVerificationPage = () => {
       }
 
       const response = await axios.post(
-        "https://localhost:5000/api/adhar/verifyAadhaarOtp",
+        "http://localhost:5000/api/adhar/verifyAadhaarOtp",
         {
           clientId: clientId,
           OTP: otp,
